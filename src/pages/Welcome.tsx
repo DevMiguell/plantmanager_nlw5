@@ -1,5 +1,6 @@
 import React from 'react'
 import { SafeAreaView, Text, Image, StyleSheet, TouchableOpacity, Dimensions, View } from 'react-native'
+import { useNavigation } from '@react-navigation/core'
 import { Feather } from '@expo/vector-icons'
 
 import colors from '../styles/colors'
@@ -7,6 +8,12 @@ import wateringImg from '../assets/watering.png'
 import fonts from '../styles/fonts'
 
 export function Welcome() {
+  const navigation = useNavigation()
+
+  function handleStart() {
+    navigation.navigate('UserIndentification')
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.wrapper}>
@@ -24,7 +31,9 @@ export function Welcome() {
           Nós cuidamos de lembrar você sempre que precisar.
         </Text>
 
-        <TouchableOpacity style={styles.button} activeOpacity={0.7}>
+        <TouchableOpacity style={styles.button}
+          activeOpacity={0.7}
+          onPress={handleStart}>
           <Feather name="chevron-right" style={styles.buttonIcon} />
         </TouchableOpacity>
       </View>

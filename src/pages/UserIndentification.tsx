@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigation } from '@react-navigation/core'
 import {
   SafeAreaView,
   StyleSheet,
@@ -33,6 +34,12 @@ export function UserIndentification() {
     setName(value)
   }
 
+  const navigation = useNavigation()
+
+  function handleSubmit() {
+    navigation.navigate('Confirmation')
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView
@@ -65,7 +72,7 @@ export function UserIndentification() {
             />
 
             <View style={styles.btnInput}>
-              <Button />
+              <Button title="Confirmar" onPress={handleSubmit}/>
             </View>
           </View>
         </View>

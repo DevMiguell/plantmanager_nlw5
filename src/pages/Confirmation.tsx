@@ -24,7 +24,7 @@ export function Confirmation() {
         </Text>
 
         <View style={styles.btnInput}>
-          <Button />
+          <Button title="Começar" />
         </View>
       </View>
     </SafeAreaView>
