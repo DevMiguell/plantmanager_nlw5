@@ -13,16 +13,16 @@ export function Welcome() {
         <Text style={styles.title}>
           Gerencie {'\n'}
           {/* Quebra de linha \n */}
-        suas plantas de{'\n'}
-        forma fácil
-      </Text>
+          suas plantas de{'\n'}
+          forma fácil
+        </Text>
 
         <Image source={wateringImg} style={styles.image} resizeMode="contain" />
 
         <Text style={styles.subTitle}>
           Não esqueça mais de regar suas plantas.
           Nós cuidamos de lembrar você sempre que precisar.
-      </Text>
+        </Text>
 
         <TouchableOpacity style={styles.button} activeOpacity={0.7}>
           <Feather name="chevron-right" style={styles.buttonIcon} />
